@@ -52,6 +52,7 @@ async def process_news(db_manager: DBManager, news_crawler_client: NewsCrawlerCl
 
             finally:
                 idx += 1
+                batch = links[idx * BATCH_SIZE:(idx + 1) * BATCH_SIZE]
 
 
 async def main():
